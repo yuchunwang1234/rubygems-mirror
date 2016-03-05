@@ -1,8 +1,8 @@
-namespace :server do
+namespace :deploy do
   task :start do
     on roles(:app) do
       within current_path do
-        execute :bundle, "exec gemirro server --start 2>&1 &"
+        execute :nohup, "bundle exec gemirro server --start 2>&1 &"
       end
     end
   end
@@ -31,3 +31,5 @@ namespace :server do
     end
   end
 end
+
+after 'deploy:published', 'deploy:restart'

@@ -9,3 +9,15 @@ namespace :config do
     end
   end
 end
+
+namespace :nginx do
+  task :reload do
+    on roles(:app) do
+      sudo "/etc/init.d/nginx reload"
+    end
+  end
+end
+
+
+after 'deploy:symlink:linked_files', 'config:install'
+after 'deploy:published', 'nginx:reload'

@@ -40,6 +40,8 @@ GEM
     sshkit (1.8.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    sshkit-sudo (0.1.0)
+      sshkit (~> 1.8)
     thin (1.6.4)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -53,6 +55,7 @@ DEPENDENCIES
   capistrano
   capistrano-bundler
   gemirro
+  sshkit-sudo
 
 BUNDLED WITH
    1.11.2

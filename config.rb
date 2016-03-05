@@ -3,7 +3,7 @@ Gemirro.configuration.configure do
   environment :production
 
   # The directory to store indexing information as well as the Gem files in.
-  destination File.expand_path('/home/rubygems/public', __FILE__)
+  destination File.expand_path('../public', __FILE__)
 
   # If you're in development mode your probably want to switch to a debug
   # logging level.

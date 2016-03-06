@@ -30,14 +30,6 @@ namespace :deploy do
       end
     end
   end
-
-  task :assets do
-    on roles(:app) do
-      within current_path do
-        execute "ln -sf assets public/dist"
-      end
-    end
-  end
 end
 
 after 'deploy:published', 'deploy:restart'

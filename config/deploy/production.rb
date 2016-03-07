@@ -1,1 +1,1 @@
-server '106.186.24.213', user: 'ruby', roles: %w{app}
+server 'tokyo.gems.ruby-china.org', user: 'ruby', roles: %w{app}

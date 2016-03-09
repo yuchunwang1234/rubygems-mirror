@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'gemirro'
-gem 'capistrano'
-gem 'capistrano-bundler'
-gem 'sshkit-sudo'
+
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'sshkit-sudo'
+end

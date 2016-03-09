@@ -9,6 +9,9 @@ GEM
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     confstruct (1.0.2)
       hashie (~> 3.3)
     daemons (1.2.3)
@@ -54,6 +57,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-bundler
+  capistrano-rvm
   gemirro
   sshkit-sudo
 

@@ -14,3 +14,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'vendor/bundle', 'public')
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
+
+set :thin_config_path, -> { "#{current_path}/config/thin.yml" }
+
+after 'deploy:publishing', 'thin:restart'

@@ -1,0 +1,170 @@
+body {
+  font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333; }
+.navbar-light {
+  padding: 0;
+  border-radius: 0;
+  background-color: #FFF;
+  border: 0px !important;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.14);
+  border: 0px;
+  color: #A1C3EE; }
+  .navbar-light a.navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .navbar-light a.nav-link {
+    font-size: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px; }
+  .navbar-light .main-nav .nav-item a.nav-link {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .navbar-light .main-nav .nav-item.active a.nav-link {
+    color: #FFF;
+    background: #5179DE; }
+    .navbar-light .main-nav .nav-item.active a.nav-link:hover {
+      color: #FFF; }
+  .navbar-light .nav-item a.nav-link {
+    color: #333; }
+    .navbar-light .nav-item a.nav-link:hover {
+      color: #000; }
+  .navbar-light .user-nav .nav-item a.nav-link {
+    padding-top: 15px;
+    color: #666;
+    font-size: 13px; }
+    .navbar-light .user-nav .nav-item a.nav-link:hover {
+      color: #333; }
+.btn, .form-control {
+  border-radius: 3px;
+  outline: none;
+  font-size: 15px; }
+.btn {
+  cursor: pointer;
+  padding: 3px 10px 4px;
+  font-size: 15px;
+  line-height: 20px;
+  transition-property: all;
+  transition-duration: 300ms;
+  outline: none !important; }
+.btn-lg {
+  padding: .75rem 1.85rem;
+  font-size: 18px;
+  line-height: 1.333333;
+  border-radius: .3rem; }
+.btn-sm {
+  padding: 2px 8px 3px;
+  font-size: 13px;
+  line-height: 17px; }
+.btn-xs {
+  padding: 1px 5px 2px;
+  font-size: 12px;
+  line-height: 15px; }
+.btn-default {
+  border: 1px solid #ccc;
+  color: #333;
+  background: #FFF; }
+  .btn-default:hover {
+    background: #f0f0f0;
+    color: #333; }
+  .btn-default:active {
+    background: #ddd; }
+.form-control {
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  padding: 5px 8px;
+  line-height: 17px; }
+  .form-control:focus {
+    border-color: #08f; }
+select.form-control {
+  height: 30px;
+  padding: 2px 25px 2px 8px; }
+p.help-block {
+  font-size: 13px;
+  color: #AAA; }
+.form-group legend {
+  font-size: 17px;
+  color: #666; }
+.input-group-addon {
+  padding: 5px 8px;
+  font-size: 13px;
+  line-height: 17px; }
+.modal .modal-content {
+  border: 0px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15), 0px 0px 1px 1px rgba(0, 0, 0, 0.05); }
+.modal .modal-header {
+  border: 0px;
+  padding-bottom: 0px; }
+  .modal .modal-header .close {
+    margin-top: -8px;
+    font-weight: normal;
+    outline: none !important; }
+  .modal .modal-header .modal-title {
+    font-size: 16px;
+    margin-bottom: 20px; }
+.modal .modal-footer {
+  border-color: #e5e5e5; }
+.modal-backdrop.in {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1); }
+.alert {
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 14px; }
+  .alert h2, .alert h3, .alert h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px; }
+  .alert ul {
+    padding-left: 18px; }
+.alert .close {
+  font-size: 16px;
+  margin-top: -8px;
+  right: -4px;
+  font-weight: normal; }
+.alert-danger {
+  background: #F7F2F3;
+  color: #C1505D;
+  border-color: #F5E5DD; }
+.alert-warning {
+  background: #FEFFE6;
+  border-color: #F3ECE7; }
+.alert-success {
+  background: #EEFFE3;
+  border-color: #DAECCF; }
+.alert-info {
+  background: #F1F4F9;
+  border-color: #CFD6EC; }
+
+
+.pull-none {float:none;}
+
+body { background: #F0F0F0; }
+
+.footer { padding: 20px 0 40px 0; }
+
+#mainbox { padding: 0px 0; background: #FFF; box-shadow: 0 0 2px 0px rgba(0,0,0,0.14); }
+
+pre {
+  background: #F0F0F0;
+  padding: 20px;
+}
+
+#home h1 { text-align: center; font-size: 24px; padding: 20px 0; }
+#home h1 i { font-style: normal; color: #999; margin-left: 5px;}
+#home h1 i .r { color: #BA1210; }
+#home h1 i .c { color: #666; }
+#home .jumbotron {
+  padding: 60px 0; margin-bottom: 40px; background: #B8392C; color: #FFF;
+  border-radius: 0px;
+}
+#home .jumbotron h2 { margin-bottom: 30px; }
+#home .jumbotron a:link,
+#home .jumbotron a:visited { color: #F1AA9B; }
+
+#home h5 { margin-top: 20px; margin-bottom: 20px; color: #AAA; }

@@ -1,9 +1,13 @@
 Gemirro.configuration.configure do
   # Define sinatra environment
-  environment :production
+  if ENV['RAILS_ENV'] == 'production'
+    environment :production
+  else
+    environment :development
+  end
 
   # The directory to store indexing information as well as the Gem files in.
-  destination File.expand_path('../public', __FILE__)
+  destination File.expand_path('../../public', __FILE__)
 
   # If you're in development mode your probably want to switch to a debug
   # logging level.
@@ -14,8 +18,8 @@ Gemirro.configuration.configure do
   #
   server.host '0.0.0.0'
   server.port '2000'
-  server.access_log File.expand_path('../log/access.log', __FILE__)
-  server.error_log File.expand_path('../log/error.log', __FILE__)
+  server.access_log File.expand_path('../../log/access.log', __FILE__)
+  server.error_log File.expand_path('../../log/error.log', __FILE__)
 
   # You must define a source wich where gems will be downloaded.
   # All gem in the block will be downloaded with the update command.

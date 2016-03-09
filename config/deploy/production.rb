@@ -1,1 +1,1 @@
-server 'tokyo.gems.ruby-china.org', user: 'ruby', roles: %w{app}
+server 'us0.gems.ruby-china.org', user: 'ubuntu', roles: %w{app}

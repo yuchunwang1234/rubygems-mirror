@@ -18,7 +18,7 @@ http://gems.ruby-china.org
                                            |
                           [CDN 1] [CDN 2] [CDN 3] ... [CDN N]
                                            |
-                               [tokyo.gems.ruby-china.org]
+                               [us0.gems.ruby-china.org]
                                            |
                                         [Nginx]
                                            |

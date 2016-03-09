@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'rubygems'
 set :repo_url, 'git@github.com:ruby-china/rubygems-mirror.git'
-set :deploy_to, '/home/ruby/www/rubygems'
+set :deploy_to, '/home/ubuntu/www/rubygems'
 set :log_level, :info
 
 # Default value for :linked_files is []

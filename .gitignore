@@ -1,2 +1,5 @@
 log/
 tmp/
+public/*.gz
+public/**/*.gem
+public/*.8

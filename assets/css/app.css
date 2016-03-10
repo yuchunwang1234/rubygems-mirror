@@ -146,7 +146,10 @@ p.help-block {
 
 body { background: #F0F0F0; }
 
-.footer { padding: 20px 0 40px 0; }
+.footer { padding: 20px 0 40px 0;  text-align:center; }
+.footer .logos { text-align:center; margin-top: 50px; }
+.footer .logos a { margin: 0 20px; }
+.footer .logos a img { width: 64px; height: 64px; }
 
 #mainbox { padding: 0px 0; background: #FFF; box-shadow: 0 0 2px 0px rgba(0,0,0,0.14); }
 

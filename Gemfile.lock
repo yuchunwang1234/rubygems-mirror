@@ -15,6 +15,7 @@ GEM
     capistrano-thin (1.2.0)
       capistrano (~> 3.0)
       thin (~> 1.6)
+    chronic (0.10.2)
     confstruct (1.0.2)
       hashie (~> 3.3)
     daemons (1.2.3)
@@ -53,6 +54,8 @@ GEM
       eventmachine (~> 1.0, >= 1.0.4)
       rack (~> 1.0)
     tilt (2.0.2)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -65,6 +68,7 @@ DEPENDENCIES
   gemirro
   sshkit-sudo
   thin
+  whenever
 
 BUNDLED WITH
    1.11.2

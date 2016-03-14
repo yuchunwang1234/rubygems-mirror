@@ -17,6 +17,4 @@ set :keep_releases, 5
 
 set :thin_config_path, -> { "#{current_path}/config/thin.yml" }
 
-set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
-
 after 'deploy:publishing', 'thin:restart'

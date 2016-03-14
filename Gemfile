@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'gemirro'
 gem 'thin'
+gem 'whenever'
 
 group :development do
   gem 'capistrano'

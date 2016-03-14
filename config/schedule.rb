@@ -17,6 +17,6 @@ root = File.expand_path('../../', __FILE__)
 
 set :output, "#{root}/log/cron.log"
 
-every 2.hours do
+every 2.hours, roles: [:app] do
   command "#{root}/bin/ruby_mirror"
 end

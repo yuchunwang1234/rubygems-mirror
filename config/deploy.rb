@@ -15,7 +15,8 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'vendor/bundle
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-set :thin_config_path, -> { "#{current_path}/config/thin.yml" }
+set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
+
 
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 

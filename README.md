@@ -18,6 +18,8 @@ https://gems.ruby-china.org
                                            |
                           [CDN 1] [CDN 2] [CDN 3] ... [CDN N]
                                            |
+                           {Load Balance us.gems.ruby-china.org}
+                                           |
                          [us0.gems.ruby-china.org]  ... us1 .. us2
                                            |
                                         [Nginx]

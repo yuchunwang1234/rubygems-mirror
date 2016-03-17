@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'gemirro'
-gem 'thin'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'unicorn'
 gem 'whenever'
 
 group :development do
   gem 'capistrano'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
-  gem 'capistrano-thin'
+  gem 'capistrano3-unicorn'
   gem 'sshkit-sudo'
 end

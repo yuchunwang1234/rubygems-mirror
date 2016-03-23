@@ -14,7 +14,7 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
 ### 架构情况
 
 ```
-                                            [gems.ruby-china.org]
+                                [gems.ruby-china.org] [cdn.gems.ruby-china.org]
                                                      |
                                      {Load Balance us.gems.ruby-china.org}
                                                      |
@@ -22,13 +22,19 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
                                                      |
                                                   [Nginx]
                                                      |
-                ---------------------------------------------------------------------------------
-                |                                    |                    |                     |
-    {*.4.8, *.4.8.gz}                          {/gems, /quick}           {/}                 {/api}
-               |                                     |                    |                     |
-  [rubygems.global.ssl.fastly.net]      [cdn.gems.ruby-china.org]    [app server]         [rubygems.org]
-                                                     |
-                                   [CDN 1] [CDN 2] [CDN 3] ... [CDN N] {Long Cache}
-                                                     |
-                                      [rubygems.global.ssl.fastly.net]
+                ---------------------------------------------------------------------------------------
+                |                                    |                          |                     |
+    {*.4.8, *.4.8.gz}                          {/gems, /quick}                 {/}                 {/api}
+               |                                     |                          |                     |
+  [rubygems.global.ssl.fastly.net]      <if host = gems / cdn.gems>       [app server]         [rubygems.org]
+                                           |                   |
+                    [gems-10023966.file.myqcloud.com]  [rubygems.global.ssl.fastly.net]
+                                           |
+                                      [QCloud COS]
+                                           |
+                                 ----------------------
+                                 Found             Not Found
+                                  |                   |
+                                [200]       [cdn.gems.ruby-china.org]
+
 ```

@@ -14,20 +14,21 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
 ### 架构情况
 
 ```
-                                  [gems.ruby-china.org]
-                                           |
-                          [CDN 1] [CDN 2] [CDN 3] ... [CDN N]
-                                           |
-                           {Load Balance us.gems.ruby-china.org}
-                                           |
-                         [us0.gems.ruby-china.org]  ... us1 .. us2
-                                           |
-                                        [Nginx]
-                                           |
-                --------------------------------------------------
-                |                           |                    |
-    {/gems, /quick, *.4.8, *.4.8.gz}       {/}                 {/api}
-               |                            |                     |
-  [rubygems.global.ssl.fastly.net]      [app server]         [rubygems.org]
-
+                                            [gems.ruby-china.org]
+                                                     |
+                                     {Load Balance us.gems.ruby-china.org}
+                                                     |
+                                   [us0.gems.ruby-china.org]  ... us1 .. us2
+                                                     |
+                                                  [Nginx]
+                                                     |
+                ---------------------------------------------------------------------------------
+                |                                    |                    |                     |
+    {*.4.8, *.4.8.gz}                          {/gems, /quick}           {/}                 {/api}
+               |                                     |                    |                     |
+  [rubygems.global.ssl.fastly.net]      [cdn.gems.ruby-china.org]    [app server]         [rubygems.org]
+                                                     |
+                                   [CDN 1] [CDN 2] [CDN 3] ... [CDN N] {Long Cache}
+                                                     |
+                                      [rubygems.global.ssl.fastly.net]
 ```

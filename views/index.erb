@@ -16,34 +16,43 @@
     </div>
   </div>
 
-
-
   <div class="container">
-    <div class="alert alert-warning">试运行中...</div>
-
     <h5>如何使用？</h5>
+      <p>请尽可能用比较新的 RubyGems 版本，建议 2.6.x 以上。</p>
+
+<div class="highlight">
+<pre><span class="nv">$ </span>gem update --system # 这里请翻墙一下
+<span class="nv">$ </span>gem -v
+2.6.3</pre>
+</div>
+
+
 <div class="highlight">
 <pre><span class="nv">$ </span>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 <span class="nv">$ </span>gem sources -l
-*** CURRENT SOURCES ***
-
 https://gems.ruby-china.org
-<span class="c"># 请确保只有 gems.ruby-china.org</span>
-<span class="nv">$ </span>gem install rails</pre>
+<span class="c"># 确保只有 gems.ruby-china.org</span>
 </div>
 
+
     <h5>如果你使用 Gemfile 和 Bundle (例如：Rails 项目)</h5>
-    你可以用 Bundler 的 <a href="http://bundler.io/v1.5/bundle_config.html#gem-source-mirrors">Gem 源代码镜像命令</a>。
+    <p>你可以用 Bundler 的 <a href="http://bundler.io/v1.5/bundle_config.html#gem-source-mirrors">Gem 源代码镜像命令</a>。</p>
 
 <div class="highlight">
 <pre><code><span class="nv">$ </span>bundle config mirror.https://rubygems.org https://gems.ruby-china.org</code></pre>
 </div>
 
-    这样你不用改你的 Gemfile 的 source。
+    <p>这样你不用改你的 Gemfile 的 source。</p>
 <div class="highlight">
 <pre><span class="n">source</span> <span class="s1">'https://rubygems.org/'</span>
 <span class="n">gem</span> <span class="s1">'rails'</span><span class="p">,</span> <span class="s1">'4.2.5'</span>
 <span class="o">.</span><span class="n">.</span><span class="o">.</span></pre>
 </div>
+
+    <h5>常见问题？</h5>
+    <ul class="faq">
+      <li>如果遇到 SSL 证书问题，你又无法解决，请直接用 <code>http://gems.ruby-china.org</code> 避免 SSL 的问题。</li>
+      <li>如果你在意 Gem 下载的安全问题，请正确安装 Ruby、OpenSSL，建议部署 Linux 服务器的时候采用 <a href="https://github.com/huacnlee/init.d/blob/master/install_rvm" target="_blank">这个 RVM 安装脚本</a> 的方式安装 Ruby。</li>
+    </ul>
   </div>
 </div>

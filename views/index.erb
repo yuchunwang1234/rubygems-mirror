@@ -53,6 +53,7 @@ https://gems.ruby-china.org
     <ul class="faq">
       <li>如果遇到 SSL 证书问题，你又无法解决，请直接用 <code>http://gems.ruby-china.org</code> 避免 SSL 的问题。</li>
       <li>如果你在意 Gem 下载的安全问题，请正确安装 Ruby、OpenSSL，建议部署 Linux 服务器的时候采用 <a href="https://github.com/huacnlee/init.d/blob/master/install_rvm" target="_blank">这个 RVM 安装脚本</a> 的方式安装 Ruby。</li>
+      <li><code>Bundler::GemspecError: Could not read gem at /home/xxx/.rvm/gems/ruby-2.1.8/cache/rugged-0.23.3.gem. It may be corrupted.</code>，这类错误是网络原因下载到了坏掉的文件到本地，请直接删除那个文件。</li>
     </ul>
   </div>
 </div>

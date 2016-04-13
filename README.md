@@ -28,13 +28,15 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
                |                                     |                          |                     |
   [rubygems.global.ssl.fastly.net]      <if host = gems / cdn.gems>       [app server]         [rubygems.org]
                                            |                   |
-                    [gems-10023966.file.myqcloud.com]  [rubygems.global.ssl.fastly.net]
+                    [gems-ruby-china.b0.upaiyun.com]  [rubygems.global.ssl.fastly.net]
                                            |
-                                      [QCloud COS]
+                                      [UpYun CDN]
                                            |
                                  ----------------------
                                  Found             Not Found
                                   |                   |
                                 [200]       [cdn.gems.ruby-china.org]
+                                                      |
+                                                    [200]
 
 ```

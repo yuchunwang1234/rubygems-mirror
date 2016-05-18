@@ -27,8 +27,6 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
     {*.4.8, *.4.8.gz}                          {/gems, /quick}                 {/}                 {/api}
                |                                     |                          |                     |
   [rubygems.global.ssl.fastly.net]      <gems-ruby-china.b0.upaiyun.com>   [app server]         [rubygems.org]
-                                                     |     
-                              [gems-ruby-china.b0.upaiyun.com]
                                                      |
                                                 [UpYun CDN]
                                                      |

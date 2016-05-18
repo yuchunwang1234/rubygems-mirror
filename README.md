@@ -26,17 +26,17 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
                 |                                    |                          |                     |
     {*.4.8, *.4.8.gz}                          {/gems, /quick}                 {/}                 {/api}
                |                                     |                          |                     |
-  [rubygems.global.ssl.fastly.net]      <if host = gems / cdn.gems>       [app server]         [rubygems.org]
-                                           |                   |
-                    [gems-ruby-china.b0.upaiyun.com]  [rubygems.global.ssl.fastly.net]
-                                           |
-                                      [UpYun CDN]
-                                           |
-                                 ----------------------
-                                 Found             Not Found
-                                  |                   |
-                                [200]       [cdn.gems.ruby-china.org]
-                                                      |
-                                                    [200]
+  [rubygems.global.ssl.fastly.net]      <gems-ruby-china.b0.upaiyun.com>   [app server]         [rubygems.org]
+                                                     |     
+                              [gems-ruby-china.b0.upaiyun.com]
+                                                     |
+                                                [UpYun CDN]
+                                                     |
+                                           ----------------------
+                                           Found             Not Found
+                                            |                   |
+                                          [200]       [rubygems.global.ssl.fastly.net]
+                                                                |
+                                                              [200] ------------> [UpYun Mirror Store]
 
 ```

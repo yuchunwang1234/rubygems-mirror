@@ -1,4 +1,4 @@
-etc_files = %w(etc/nginx/nginx.conf etc/nginx/conf.d/rubygems.conf etc/nginx/conf.d/test)
+etc_files = %w(etc/nginx/nginx.conf etc/nginx/conf.d/rubygems.conf etc/nginx/conf.d/rubyconf.conf etc/nginx/conf.d/test)
 
 namespace :config do
   task :install do

@@ -10,15 +10,14 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
 
 - http://us0.gems.ruby-china.org
 - http://us1.gems.ruby-china.org
+- http://sh0.gems.ruby-china.org
 
 ### 架构情况
 
 ```
-                                [gems.ruby-china.org] [cdn.gems.ruby-china.org]
+                                          [gems.ruby-china.org]
                                                      |
-                                     {Load Balance us.gems.ruby-china.org}
-                                                     |
-                                   [us0.gems.ruby-china.org]  ... us1 .. us2
+                                     [sh0.gems.ruby-china.org <Shanghai>]
                                                      |
                                                   [Nginx]
                                                      |
@@ -26,7 +25,7 @@ https://gems.ruby-china.org [SSL 证书验证](https://www.ssllabs.com/ssltest/a
                 |                                    |                          |                     |
     {*.4.8, *.4.8.gz}                          {/gems, /quick}                 {/}                 {/api}
                |                                     |                          |                     |
-  [rubygems.global.ssl.fastly.net]      <gems-ruby-china.b0.upaiyun.com>   [app server]         [rubygems.org]
+  [rubygems.global.ssl.fastly.net]      <gems-ruby-china.b0.upaiyun.com>    [app server]          [rubygems.org]
                                                      |
                                                 [UpYun CDN]
                                                      |

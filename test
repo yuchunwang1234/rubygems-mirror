@@ -1,0 +1,5 @@
+curl -I https://gems.ruby-china.org/versions
+curl -I https://gems.ruby-china.org/api/v1/dependencies
+curl -I https://gems.ruby-china.org/api/v1/dependencies?gems=rake
+curl -I https://gems.ruby-china.org/api/v1/dependencies?gems=loofah,mime-types,nokogiri,thread_safe,websocket-extensions
+curl -I https://gems.ruby-china.org/info/rack

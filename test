@@ -2,5 +2,7 @@ curl -I https://gems.ruby-china.org/versions
 curl -I https://gems.ruby-china.org/api/v1/dependencies
 curl -I https://gems.ruby-china.org/api/v1/dependencies?gems=rake
 curl -I https://gems.ruby-china.org/api/v1/dependencies?gems=loofah,mime-types,nokogiri,thread_safe,websocket-extensions
+curl https://gems.ruby-china.org/info/carrierwave-aliyun
 curl -I https://gems.ruby-china.org/info/rack
 curl -I https://gems.ruby-china.org/specs.4.8.gz
+curl -I https://gems-ruby-china.b0.upaiyun.com/specs.4.8.gz

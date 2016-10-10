@@ -20,4 +20,4 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 
-after 'deploy:publishing', 'unicorn:restart'
+after 'deploy:publishing', 'unicorn:stop', 'unicorn:start'

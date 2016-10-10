@@ -158,10 +158,11 @@ pre {
   padding: 20px;
 }
 
-#home h1 { text-align: center; font-size: 24px; padding: 20px 0; }
-#home h1 i { font-style: normal; color: #999; margin-left: 5px;}
-#home h1 i .r { color: #BA1210; }
-#home h1 i .c { color: #666; }
+.header h1 { text-align: center; font-size: 24px; padding: 20px 0; }
+.header h1 i { font-style: normal; color: #999; margin-left: 5px;}
+.header h1 i .r { color: #BA1210; }
+.header h1 i .c { color: #666; }
+
 #home .jumbotron {
   padding: 60px 0; margin-bottom: 40px; background: #B8392C; color: #FFF;
   border-radius: 0px;
@@ -169,5 +170,6 @@ pre {
 #home .jumbotron h2 { margin-bottom: 30px; }
 #home .jumbotron a:link,
 #home .jumbotron a:visited { color: #F1AA9B; }
+#home .buttons { margin-top: 30px; }
 
 #home h5 { margin-top: 20px; margin-bottom: 20px; color: #AAA; }

@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'unicorn'
 gem 'whenever'
+gem 'faraday'
 
 group :development do
   gem 'capistrano'

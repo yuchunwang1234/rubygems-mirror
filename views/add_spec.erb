@@ -1,0 +1,36 @@
+<div class="container">
+  <div  class="col-md-8 offset-md-2">
+    <p>此功能的目的是为了让定时同步无法及时同步到某个 Gem 版本的时候，你可以选择手工立即同步。</p>
+
+    <div class="card" style="margin-bottom: 40px;">
+      <div class="card-block">
+        <form method="POST" action="/add_spec">
+          <div class="form-group">
+            <label>Gem</label>
+            <input type="text" class="form-control" name="name" />
+            <p class="help-block">请输入 Gem 的名称，注意大小写，例如: nokogiri</p>
+          </div>
+          <div class="form-group">
+            <label>Version</label>
+            <input type="text" class="form-control" name="version" />
+            <p class="help-block">需要同步的版本号</p>
+          </div>
+          <div class="form-group">
+            <label>Platform</label>
+            <input type="text" class="form-control" name="platform" value="ruby" />
+            <p class="help-block">平台，一般无须修改，例如 jruby, ruby</p>
+          </div>
+          <div class="checkbox">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" name="prerelease" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Prerelease</span>
+            </label>
+            <p class="help-block">如果是 pre 版本，请勾选此项</p>
+          </div>
+          <button type="submit" class="btn btn-block btn-primary">立即同步</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

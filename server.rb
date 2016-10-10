@@ -17,6 +17,10 @@ end
 post '/add_spec' do
   params[:prerelease] ||= false
   params[:platform] ||= 'ruby'
+  if params[:name].empty? || params[:version].empty?
+    return "name 和 version 不能为空。"
+  end
+
   start = Time.now
   json = params.to_json
   conn = Faraday.new(url: 'https://gems.ruby-china.org')

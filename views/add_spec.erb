@@ -1,6 +1,7 @@
 <div class="container">
   <div  class="col-md-8 offset-md-2">
     <p>此功能的目的是为了让定时同步无法及时同步到某个 Gem 版本的时候，你可以选择手工立即同步。</p>
+    <p>耗时功能，善用！</p>
 
     <div class="card" style="margin-bottom: 40px;">
       <div class="card-block">
@@ -28,7 +29,7 @@
             </label>
             <p class="help-block">如果是 pre 版本，请勾选此项</p>
           </div>
-          <button type="submit" class="btn btn-block btn-primary">立即同步</button>
+          <button type="submit" class="btn btn-block btn-primary" data-confirm="确定已填写正确，并提交么？" data-disable-with="执行中，请稍后...">立即同步</button>
         </form>
       </div>
     </div>

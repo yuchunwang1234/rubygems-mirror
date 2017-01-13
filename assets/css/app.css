@@ -1,7 +1,8 @@
 body {
-  font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
-  font-size: 15px;
+  font-family: Helvetica, Arial, "PingFang SC", "Noto Sans", Roboto, "Microsoft Yahei", sans-serif;
+  font-size: 14px;
   font-weight: 400;
+  letter-spacing: .03em;
   line-height: 1.42857143;
   color: #333; }
 .navbar-light {
@@ -154,17 +155,20 @@ body { background: #F0F0F0; }
 #mainbox { padding: 0px 0; background: #FFF; box-shadow: 0 0 2px 0px rgba(0,0,0,0.14); }
 
 pre {
-  background: #F0F0F0;
-  padding: 20px;
+  background: #f0f0f0;
+  border: 1px solid #eee;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  line-height: 140%;
+  padding: 15px;
 }
 
 .header h1 { text-align: center; font-size: 24px; padding: 20px 0; }
 .header h1 i { font-style: normal; color: #999; margin-left: 5px;}
-.header h1 i .r { color: #BA1210; }
+.header h1 i .r { color: #ec4d3c; }
 .header h1 i .c { color: #666; }
 
 #home .jumbotron {
-  padding: 60px 0; margin-bottom: 40px; background: #B8392C; color: #FFF;
+  padding: 60px 0; margin-bottom: 40px; background: #ec4d3c; color: #FFF;
   border-radius: 0px;
 }
 #home .jumbotron h2 { margin-bottom: 30px; }
@@ -173,3 +177,10 @@ pre {
 #home .buttons { margin-top: 30px; }
 
 #home h5 { margin-top: 20px; margin-bottom: 20px; color: #AAA; }
+
+ul.faq { padding-left: 20px; }
+ul.faq li { line-height: 200%; padding: 0; list-style-type: square; }
+
+a { color: #ec4d3c;}
+
+code { color: #000; }

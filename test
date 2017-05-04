@@ -13,4 +13,4 @@ curl -I https://gems.ruby-china.org/info/rack
 echo "It 302"
 curl -I https://gems.ruby-china.org/specs.4.8.gz
 echo "It 200"
-curl -I https://gems-ruby-china.b0.upaiyun.com/specs.4.8.gz
+curl -I https://upyun.gems.ruby-china.org/specs.4.8.gz

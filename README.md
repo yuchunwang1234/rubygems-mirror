@@ -25,7 +25,7 @@ https://gems.ruby-china.org
                 |                                    |                          |                     |
     {*.4.8, *.4.8.gz}                          {/gems, /quick}                 {/}                 {/api}
                |                                     |                          |                     |
-  [gems-ruby-china.b0.upaiyun.com]      <gems-ruby-china.b0.upaiyun.com>    [app server]          [bundler-api]
+  [upyun.gems.ruby-china.org]      <upyun.gems.ruby-china.org>    [app server]          [bundler-api]
                                                      |
                                                 [UpYun CDN]
                                                      |

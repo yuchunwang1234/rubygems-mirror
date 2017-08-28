@@ -49,10 +49,19 @@ https://gems.ruby-china.org
 <span class="o">.</span><span class="n">.</span><span class="o">.</span></pre>
 </div>
 
-    <h5>常见问题？</h5>
+    <h5>SSL 证书错误</h5>
+    <p>正常情况下，你是不会遇到 SSL 证书错误的，除非你的 Ruby 安装方式不正确。</p>
+    <p>如果遇到 SSL 证书问题，你又无法解决，请修改 <code>~/.gemrc</code> 文件，增加 <code>ssl_verify_mode: 0</code> 配置，以便于 RubyGems 可以忽略 SSL 证书错误。</p>
+<div class="highlight">
+<pre>---
+:sources:
+- https://gems.ruby-china.org
+:ssl_verify_mode: 0</pre>
+</div>
+    <p>如果你在意 Gem 下载的安全问题，请正确安装 Ruby、OpenSSL，建议部署 Linux 服务器的时候采用 <a href="https://github.com/huacnlee/init.d/blob/master/install_rvm" target="_blank">这个 RVM 安装脚本</a> 的方式安装 Ruby。</p>
+
+    <h5>其他说明</h5>
     <ul class="faq">
-      <li>如果遇到 SSL 证书问题，你又无法解决，请直接用 <code>http://gems.ruby-china.org</code> 避免 SSL 的问题。</li>
-      <li>如果你在意 Gem 下载的安全问题，请正确安装 Ruby、OpenSSL，建议部署 Linux 服务器的时候采用 <a href="https://github.com/huacnlee/init.d/blob/master/install_rvm" target="_blank">这个 RVM 安装脚本</a> 的方式安装 Ruby。</li>
       <li><code>Bundler::GemspecError: Could not read gem at /home/xxx/.rvm/gems/ruby-2.1.8/cache/rugged-0.23.3.gem. It may be corrupted.</code>，这类错误是网络原因下载到了坏掉的文件到本地，请直接删除那个文件。</li>
       <li>请珍惜社区资源，勿基于本镜像做二次镜像网站，我们会定期检查 CDN 请求量统计，单日请求量过大（流量超过 20G） 的 IP 将会被永久屏蔽。</li>
     </ul>

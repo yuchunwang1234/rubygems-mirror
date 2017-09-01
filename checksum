@@ -1,0 +1,4 @@
+wget https://gems.ruby-china.org/gems/$1-$2.gem
+wget https://rubygems.org/gems/$1-$2.gem
+openssl sha -sha256 $1-$2.gem $1-$2.gem.1
+rm $1-$2.gem $1-$2.gem.1

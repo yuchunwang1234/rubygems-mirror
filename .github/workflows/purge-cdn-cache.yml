@@ -1,8 +1,8 @@
 name: Purge CDN Cache
 
 on:
-  check_run:
-    types: [rerequested, requested_action]
+  issues:
+    types: [opened]
 
 jobs:
   build:
@@ -11,3 +11,11 @@ jobs:
       - name: Purge CDN Cache
         run: |
           CI_RESPONSE=`curl -d "bucket=gems-ruby-china&urls=https://gems.ruby-china.com/versions" -H "Authorization: Bearer ${{ secrets.UPYUN_ACCESS_TOKEN }}" https://api.upyun.com/purge`
+      - name: Report result
+        uses: actions/github@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: "comment \"Purge completed: $GITHUB_ACTION\n```json\n$CI_RESPONSE\n```\""
+
+

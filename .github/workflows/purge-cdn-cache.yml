@@ -18,10 +18,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: |
-            comment @${issue.user.login}
+            comment
 
-            Purge completed result:
+            Purge completed in Action: $GITHUB_ACTION :
 
             ```json
-            ${CI_RESPONSE}
+            $CI_RESPONSE
             ```

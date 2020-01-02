@@ -3,7 +3,9 @@ name: Purge CDN Cache
 on: 
   issues:
     types: [opened]
-
+  issue_comment:
+    types: [created]
+    
 jobs:
   build:
 
@@ -12,5 +14,5 @@ jobs:
     steps:
     - name: Purge RubyGems CDN Cache to ensure get newest RubyGems version
       run: |
-        curl -d "bucket=gems-ruby-china&urls=https://gems.ruby-china.com/versions" -H "Authorization: Bearer $UPYUN_ACCESS_TOKEN" https://api.upyun.com/purge
+        curl -d "bucket=gems-ruby-china&urls=https://gems.ruby-china.com/versions" -H "Authorization: Bearer ${{ secrets.UPYUN_ACCESS_TOKEN }}" https://api.upyun.com/purge
 

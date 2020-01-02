@@ -18,9 +18,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: |
-            comment
-
-            Purge completed in Action: $GITHUB_ACTION :
+            comment Purge completed in Action: $GITHUB_ACTION:
 
             ```json
             $CI_RESPONSE

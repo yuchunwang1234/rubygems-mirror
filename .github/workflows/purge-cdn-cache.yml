@@ -22,7 +22,3 @@ jobs:
             @${issue.user.login}
 
             Purge completed: ${GITHUB_ACTION}
-
-            ```json
-            ${CI_RESPONSE}
-            ```

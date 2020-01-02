@@ -8,14 +8,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Purge CDN Cache
+        run: |
+          export CI_RESPONSE=`curl -d "bucket=gems-ruby-china&urls=https://gems.ruby-china.com/versions" -H "Authorization: Bearer ${{ secrets.UPYUN_ACCESS_TOKEN }}" https://api.upyun.com/purge`
+          echo $CI_RESPONSE
       - name: Report result
         uses: actions/github@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CI_RESPONSE: $(curl -d "bucket=gems-ruby-china&urls=https://gems.ruby-china.com/versions" -H "Authorization: Bearer ${{ secrets.UPYUN_ACCESS_TOKEN }}" https://api.upyun.com/purge)
         with:
           args: |
-            comment Purge completed in Action: $GITHUB_ACTION:
+            comment Purge completed in Action: ${GITHUB_ACTION}:
 
             ```json
             ${CI_RESPONSE}

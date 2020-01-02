@@ -17,4 +17,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-pattern: ".*Purge Cache.*"
           issue-close-message: "@${issue.user.login}\n\nPurge completed: ${GITHUB_ACTION}\n\n```json\n${CI_RESPONSE}\n```"

@@ -13,13 +13,8 @@ jobs:
           export CI_RESPONSE=`curl -d "bucket=gems-ruby-china&urls=https://gems.ruby-china.com/versions" -H "Authorization: Bearer ${{ secrets.UPYUN_ACCESS_TOKEN }}" https://api.upyun.com/purge`
           echo $CI_RESPONSE
       - name: Report result
-        uses: actions/github@v1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: roots/issue-closer@v1.1
         with:
-          args: |
-            comment Purge completed in Action: ${GITHUB_ACTION}:
-
-            ```json
-            ${CI_RESPONSE}
-            ```
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-close-message: "Purge completed!\n\n@${issue.user.login} this issue was automatically closed."
+          issue-pattern: ".*Cache.*"

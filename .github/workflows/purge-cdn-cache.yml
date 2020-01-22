@@ -16,5 +16,5 @@ jobs:
         uses: roots/issue-closer@v1.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-close-message: "Purge completed!\n\n@${issue.user.login} this issue was automatically closed."
+          issue-close-message: "[RubyGems 镜像](https://gems.ruby-china.com) 缓存强制刷新成功！\n\n @${issue.user.login} 现在你可以用 `Bundler` 获取到任何 Gem 的最新版本了，比如 `bundle update your-gem`。"
           issue-pattern: ".*Cache.*"
